@@ -21,3 +21,15 @@ class Data(object):
 
     def imprime(self):
         print '%s/%s/%s' % (self.dia, self.mes, self.ano)
+
+class Pessoa(object):
+    'Classe para calcular IMC'
+
+    def __init__(self, nome, peso, altura):
+        self.nome = nome
+        self.peso = float(peso)
+        self.altura = float(altura)
+
+    def imprime(self):
+        imc = self.peso / (self.altura * self.altura)
+        print 'Imc de %s: %s' % (self.nome, imc)
