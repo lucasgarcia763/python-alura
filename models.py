@@ -18,6 +18,12 @@ class Perfil(object):
     def obter_curtidas(self):
         return self.__curtidas
 
+class Perfil_Vip(Perfil):
+    'Classe para perfis vips'
+
+    def obter_creditos(self):
+        return super(Perfil_Vip, self).obter_curtidas() * 10.0
+
 class Data(object):
     'Classe para formatar datas'
 
