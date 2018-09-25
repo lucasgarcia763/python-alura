@@ -21,6 +21,10 @@ class Perfil(object):
 class Perfil_Vip(Perfil):
     'Classe para perfis vips'
 
+    def __init__(self, nome, telefone, empresa, apelido):
+        super(Perfil_Vip, self).__init__(nome, telefone, empresa)
+        self.apelido = apelido
+
     def obter_creditos(self):
         return super(Perfil_Vip, self).obter_curtidas() * 10.0
 
